@@ -1,4 +1,5 @@
 import hashlib
+import os
 import numpy as np
 from typing import List
 
@@ -29,25 +30,66 @@ class Post:
 
 # load lists
 def cpa_posts() -> List[Post]:
-
-    return list(map(lambda x: Post(x, "cpa_posts", None), list(np.arange(30))))
+    return load_posts("cpa")
 
 
 def mem_posts() -> List[Post]:
-    return list(map(lambda x: Post(x, "mem_posts", None), list(np.arange(30))))
+    return load_posts("mem")
 
 
 def jka_posts() -> List[Post]:
-    return list(map(lambda x: Post(x, "jka_posts", None), list(np.arange(30))))
+    return load_posts("jka")
 
 
 def cpb_posts() -> List[Post]:
-    return list(map(lambda x: Post(x, "cpb_posts", None), list(np.arange(30))))
+    return load_posts("cpb")
 
 
 def fre_posts() -> List[Post]:
-    return list(map(lambda x: Post(x, "fre_posts", None), list(np.arange(30))))
+    return load_posts("fre")
 
 
 def jkb_posts() -> List[Post]:
-    return list(map(lambda x: Post(x, "jkb_posts", None), list(np.arange(30))))
+    return load_posts("jkb")
+
+
+def image_path(id: str, path: str) -> str:
+    paths = os.listdir(path)
+    if f"{id}.png" in paths:
+        return f"{path}/{id}.png"
+    if f"{id}.jpg" in paths:
+        return f"{path}/{id}.jpg"
+    if f"{id}.jpeg" in paths:
+        return f"{path}/{id}.jpeg"
+    return None
+
+
+def post_from(id: str, text: str, path: str) -> Post:
+    return Post(
+        int(id),
+        text=text if len(text) > 0 else None,
+        img_path=image_path(id, path)
+    )
+
+
+def load_posts(name: str) -> List[Post]:
+    path = f"./content/{name}"
+    posts: List[Post] = list()
+    curr_text: str = ""
+    curr_id: str = ""
+    with open(path + "/text.txt", "r") as file:
+        while True:
+            line = file.readline()
+            if not line:
+                break
+            if line[0:3] == "#ID":
+                curr_id = line[3:].strip()
+                curr_text = curr_text.strip()
+                if len(curr_text) <= 280:
+                    posts.append(post_from(curr_id, curr_text, path))
+                else:
+                    print("dropping", curr_id, len(curr_text))
+                curr_text = ""
+            else:
+                curr_text += line
+    return posts

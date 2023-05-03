@@ -23,7 +23,7 @@
 - Anon
 #ID004
 
-"We need encryption because there are bad people in the world, and encryption is a way to protect ourselves from them." 
+"We need encryption because there are bad people in the world, and encryption is a way to protect ourselves from them."
 
 - Whitfield Diffie
 #ID005
@@ -65,7 +65,7 @@
 
 "The only way to deal with government intrusion is to make sure that it can't happen in the first place."
 
-- Edward Snowden
+- Edward Snowden @Snowden
 #ID013
 
 "Privacy is power. What people don't know, they can't control."
