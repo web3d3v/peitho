@@ -1,146 +1,148 @@
 "Privacy is not a crime."
+
 - Anonymous
-#ID001
+#ID000
 
 "Encryption is a human right." 
 
 - Edward Snowden @Snowden
-#ID002
+#ID001
 
 "Cypherpunks write code. We know that someone has to write software to defend privacy, and we're going to write it." 
 
 - Eric Hughes
-#ID003
+#ID002
 
 "The right to privacy is one of the most important rights we have. Without it, we can't have a free society." 
 
 - Bruce Schneier @schneierblog
-#ID004
+#ID003
 
 "In a world where everything is connected, privacy and security are not just privileges, they're necessities." 
 
 - Anon
-#ID005
+#ID004
 
 "We need encryption because there are bad people in the world, and encryption is a way to protect ourselves from them." 
 
 - Whitfield Diffie
-#ID006
+#ID005
 
 "If privacy is outlawed, only outlaws will have privacy."
 
 - Philip Zimmermann
-#ID007
+#ID006
 
 "Without privacy, there can be no democracy."
 
 - Anon
-#ID008
+#ID007
 
 “One must acknowledge with cryptography no amount of violence will ever solve a math problem.”
 
 - Jacob Appelbaum
-#ID009
+#ID008
 
 "Privacy is not a privilege, it's a right. We must fight for it, and we must win."
 
 - Anon
-#ID010
+#ID009
 
-"We are building a world where the internet is the world's central nervous system. And if that world is to be a good one, we must be as concerned with the rights of individuals within that world as we are with the stability of the system as a whole."
+"We are building a world where the internet is the world's central nervous system. If that world is to be a good one, we must be as concerned with the rights of individuals within that world as we are with the stability of the system as a whole."
 
 - Bruce Schneier @schneierblog
-#ID011
+#ID010
 
 "If you think privacy is unimportant for you because you have nothing to hide, you might as well say free speech is unimportant for you because you have nothing to say."
 
 - Edward Snowden @Snowden
-#ID012
+#ID011
 
 "Encryption is the defense against the dark arts for the digital world."
 
 - Bruce Schneier @schneierblog
-#ID013
+#ID012
 
 "The only way to deal with government intrusion is to make sure that it can't happen in the first place."
 
 - Edward Snowden
-#ID014
+#ID013
 
 "Privacy is power. What people don't know, they can't control."
 
 - Cindy Cohn
-#ID015
+#ID014
 
 "Privacy is not about having something to hide, it's about the right to control what you share with others."
 
 - Glenn Greenwald @ggreenwald
-#ID016
+#ID015
 
 "Cryptography is the essential building block of independence for organisations on the Internet, just like armies are the essential building blocks of states, because otherwise one state just takes over another."
 
 - Julian Assange @JulianAssange_
-#ID017
+#ID016
 
 "The Net interprets censorship as damage and routes around it."
 
 - John Gilmore
-#ID018
+#ID017
 
 "Cryptography shifts the balance of power from those with a monopoly on violence to those who comprehend mathematics and security design."
 - Jacob Appelbaum
-#ID019
+#ID018
 
 "Surveillance is the business model of the Internet."
 
 - Bruce Schneier @schneierblog
-#ID020
+#ID019
 
 "You can't have a backdoor that's only for the good guys."
 
 - Brian Behlendorf @brianbehlendorf
-#ID021
+#ID020
 
 "The future of privacy is distributed trust."
 
 - Zooko Wilcox @zooko
-#ID022
+#ID021
 
 "Anonymity is the enemy of censorship."
 
 - Wei Dai
-#ID023
+#ID022
 
 "The only way to be truly secure on the internet is to become as anonymous as possible."
 
 - Kevin Mitnick @kevinmitnick
-#ID024
+#ID023
 
 "Code is speech."
 
 - Lawrence Lessig @lessig
-#ID025
+#ID024
 
 "We cannot expect governments, corporations, or other large, faceless organizations to grant us privacy out of their beneficence."
 
 - Phil Zimmermann
-#ID026
+#ID025
 
 "The internet is a surveillance state. Whether we admit it to ourselves or not, and whether we like it or not, we're being tracked all the time."
 
 - Bruce Schneier
-#ID027
+#ID026
 
 "In blockchain we trust."
 
 - Anons
-#ID028
+#ID027
 
 "The computer can be used as a tool to liberate and protect people, rather than to control them."
 
 - Hal Finney @halfin
-#ID029
+#ID028
 
-“If you take away the state’s monopoly over the means of economic interaction, then you take away one of the three principal ingredients of the state. In the model of the state as a mafia, where the state is a protection racket, the state shakes people down for money in every possible way. Controlling currency flows is important for revenue-raising by the state, but it is also important for simply controlling what people do...”
+“If you take away the state’s monopoly over the means of economic interaction, then you take away one of the three principal ingredients of the state. The state as a mafia, the state shakes people down for money in every possible way.”
+
 ― Julian Assange @JulianAssange_
-#ID030
+#ID029
