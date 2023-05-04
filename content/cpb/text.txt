@@ -10,10 +10,10 @@
 
 "Crypto is the only way to fight back against the centralized powers that seek to control our lives."
 
-- Erik Voorhees @ErikVoorhees, Founder of ShapeShift
+- Erik Voorhees @ErikVoorhees, Founder of @ShapeShift
 #ID002
 
-Ethereum is not just a cryptocurrency, it's a paradigm shift in the way we think about trust and transactions."
+"Ethereum is not just a cryptocurrency, it's a paradigm shift in the way we think about trust and transactions."
 
 - Meltem Demirors @Melt_Dem
 #ID003
@@ -30,18 +30,17 @@ Ethereum is not just a cryptocurrency, it's a paradigm shift in the way we think
 
 "Bitcoin will do to banks what email did to the postal industry"
 
-– Rick Falkvinge
+– Rick Falkvinge @Falkvinge
 #ID006
 
 "Crypto is the only force that can provide a safe haven for dissidents and activists who are persecuted by authoritarian governments for speaking out."
-- Kevin Owocki @owocki, Founder of Gitcoin
+- Kevin Owocki @owocki, Founder of @gitcoin
 #ID007
 
 "Bitcoin, and the ideas behind it, will be a disrupter to the traditional notions of currency. In the end, currency will be better for it."
 
-– Edmund Moy, 38th Director of the United States Mint
+– Edmund Moy @EdmundCMoy, 38th Director of the United States Mint
 #ID008
-
 
 "The Federal Reserve simply does not have authority to supervise or regulate Bitcoin in any way."
 
@@ -60,7 +59,7 @@ Ethereum is not just a cryptocurrency, it's a paradigm shift in the way we think
 
 "Web3 is about creating a more resilient internet, where the failure of one node does not bring down the entire system."
 
-- Kevin Owocki @owocki, Founder of Gitcoin
+- Kevin Owocki @owocki, Founder of @gitcoin
 #ID012
 
 "Ethereum is not just a technology, it's a movement."
@@ -73,7 +72,7 @@ Ethereum is not just a cryptocurrency, it's a paradigm shift in the way we think
 - Vitalik Buterin @vitalik
 #ID014
 
-"If [Bitcoin does] not [reach $500.000 by the end of 2020], I will eat my d*ck on national television."
+"If Bitcoin does not reach $500.000 by the end of 2020, I will eat my d*ck on national television."
 - John McAfee @officialmcafee
 
 RIP Ah those were the simpler times ...
