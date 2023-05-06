@@ -2,3 +2,4 @@ numpy
 jsonpickle
 pandas
 tweepy
+python-dotenv

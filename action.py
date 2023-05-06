@@ -79,10 +79,10 @@ def load_actions(account_a: Account, account_b: Account, mock: bool = False) -> 
         actions = jsonpickle.decode(actions_data)
         if len(actions) == 0:
             actions = generate_actions(account_a, account_b)
-            store_actions(actions)
+            store_actions(actions, mock)
     else:
         actions = generate_actions(account_a, account_b)
-        store_actions(actions)
+        store_actions(actions, mock)
     for action in actions:
         if action.account.name == account_a.name:
             action.account = account_a
