@@ -6,6 +6,7 @@ from post import Post
 from utils import read_from_file, write_to_file
 
 ACTIONS_PATH = ".run/actions.json"
+MOCK_ACTIONS_PATH = ".run/mock_actions.json"
 
 
 class Action:
@@ -70,9 +71,10 @@ def generate_actions(account_a: Account, account_b: Account) -> List[Action]:
     return actions
 
 
-def load_actions(account_a: Account, account_b: Account) -> List[Action]:
+def load_actions(account_a: Account, account_b: Account, mock: bool = False) -> List[Action]:
     # restore or generate actions if needed
-    actions_data = read_from_file(ACTIONS_PATH)
+    actions_path = MOCK_ACTIONS_PATH if mock else ACTIONS_PATH
+    actions_data = read_from_file(actions_path)
     if actions_data is not None:
         actions = jsonpickle.decode(actions_data)
         if len(actions) == 0:
@@ -91,5 +93,6 @@ def load_actions(account_a: Account, account_b: Account) -> List[Action]:
     return actions
 
 
-def store_actions(actions: List[Action]):
-    write_to_file(jsonpickle.encode(actions), ACTIONS_PATH)
+def store_actions(actions: List[Action], mock: bool = False):
+    actions_path = MOCK_ACTIONS_PATH if mock else ACTIONS_PATH
+    write_to_file(jsonpickle.encode(actions), actions_path)
