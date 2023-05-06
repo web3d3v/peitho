@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from account import Account, load_accounts, load_mock_accounts
+from account import load_accounts, load_mock_accounts
 from action import load_actions, store_actions
 from executor import MockExecutor, Executor, exec_next_action
 
@@ -13,11 +13,13 @@ CLIENT_SECRET = os.getenv("CLIENT_SECRET")
 
 
 def run():
-    soc_account, dev_account = load_mock_accounts()
+    soc_account, dev_account = load_accounts()
     actions = load_actions(soc_account, dev_account)
-    executor = MockExecutor()
-    actions = exec_next_action(executor, actions)
-    store_actions(actions)
+    executor = Executor()
+    if len(actions) > 0:
+        actions = exec_next_action(executor, actions)
+        store_actions(actions)
+
 
 if __name__ == "__main__":
     run()

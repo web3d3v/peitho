@@ -130,7 +130,7 @@ https://www.youtube.com/watch?v=RVKNtixVBYc
 
 "The Network State represents a fundamental shift in how we think about governance, power, and the role of the state in society."
 
-- @vitalik
+- Vitalik Buterin @vitalik
 #ID026
 
 "Crypto is the only way to build a more decentralized, democratic, and resilient society, and ensure that power is distributed among many, not concentrated in the hands of the few."

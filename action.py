@@ -24,6 +24,7 @@ class PostAction(Action):
 
 class RTAction(Action):
     tweet_id: int = None
+    tweet_url: str = None
 
     def __init__(self, account: Account, post: Post):
         self.uuid = post.uuid()
@@ -32,6 +33,7 @@ class RTAction(Action):
 
 class SRTAction(Action):
     tweet_id: int = None
+    tweet_url: str = None
 
     def __init__(self, account: Account, post: Post):
         self.uuid = post.uuid()
@@ -73,9 +75,19 @@ def load_actions(account_a: Account, account_b: Account) -> List[Action]:
     actions_data = read_from_file(ACTIONS_PATH)
     if actions_data is not None:
         actions = jsonpickle.decode(actions_data)
+        if len(actions) == 0:
+            actions = generate_actions(account_a, account_b)
+            store_actions(actions)
     else:
         actions = generate_actions(account_a, account_b)
         store_actions(actions)
+    for action in actions:
+        if action.account.name == account_a.name:
+            action.account = account_a
+        elif action.account.name == account_b.name:
+            action.account = account_b
+        else:
+            print("Failed to update accounts")
     return actions
 
 

@@ -1,6 +1,6 @@
-"The right to be left alone is the most cherished of all rights."
+"Dissent is the highest form of patriotism."
 
-- Louis D. Brandeis
+- Howard Zinn
 #ID000
 
 "The only way to deal with an unfree world is to become so absolutely free that your very existence is an act of rebellion."
@@ -13,9 +13,9 @@
 - Benjamin Franklin
 #ID002
 
-"Dissent is the highest form of patriotism."
+"I would rather be exposed to the inconveniences attending too much liberty than those attending too small a degree of it."
 
-- Howard Zinn
+- Thomas Jefferson
 #ID003
 
 "The most dangerous man to any government is the man who is able to think things out... without regard to the prevailing superstitions and taboos."
@@ -23,14 +23,13 @@
 - H. L. Mencken
 #ID004
 
-"The dissident does not operate in the realm of genuine power at all. He is not seeking power. He has no desire for office and does not gather votes. He does not attempt to charm the public, he offers nothing and promises nothing. He can offer, if anything, only his own skin - and he offers it solely because he has no other way of affirming the truth he stands for. His actions simply articulate his dignity as a citizen, regardless of the cost."
-
+"The dissident does not operate in the realm of genuine power at all. He doesn't attempt to charm the public. He can offer, if anything, only his own skin - and he offers it solely because he has no other way of affirming the truth he stands for."
 - Vaclav Havel
 #ID005
 
-"I would rather be exposed to the inconveniences attending too much liberty than those attending too small a degree of it."
+"The right to be left alone is the most cherished of all rights."
 
-- Thomas Jefferson
+- Louis D. Brandeis
 #ID006
 
 “Those who can make you believe absurdities, can make you commit atrocities.”
