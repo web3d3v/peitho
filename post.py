@@ -1,7 +1,11 @@
 import hashlib
+import pathlib
 import os
 import numpy as np
 from typing import List
+
+
+PATH = pathlib.Path(__file__).parent.resolve()
 
 
 class Post:
@@ -73,7 +77,7 @@ def post_from(id: str, text: str, path: str) -> Post:
 
 
 def load_posts(name: str) -> List[Post]:
-    path = f"./content/{name}"
+    path = f"{PATH}/content/{name}"
     posts: List[Post] = list()
     curr_text: str = ""
     curr_id: str = ""

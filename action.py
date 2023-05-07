@@ -1,12 +1,15 @@
 import jsonpickle
 import post
+import pathlib
 from account import Account
 from typing import List
 from post import Post
 from utils import read_from_file, write_to_file
 
-ACTIONS_PATH = ".run/actions.json"
-MOCK_ACTIONS_PATH = ".run/mock_actions.json"
+
+PATH = pathlib.Path(__file__).parent.resolve()
+ACTIONS_PATH = f"{PATH}/.run/actions.json"
+MOCK_ACTIONS_PATH = f"{PATH}/.run/mock_actions.json"
 
 
 class Action:

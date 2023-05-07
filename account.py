@@ -1,4 +1,5 @@
 import os
+import pathlib
 import jsonpickle
 import tweepy
 from requests.auth import HTTPBasicAuth
@@ -35,8 +36,9 @@ class Account:
         return self.__str__()
 
 
-ACCOUNTS_PATH = ".run/accounts.json"
-MOCK_ACCOUNTS_PATH = ".run/mock_accounts.json"
+PATH = pathlib.Path(__file__).parent.resolve()
+ACCOUNTS_PATH = f"{PATH}/.run/accounts.json"
+MOCK_ACCOUNTS_PATH = f"{PATH}/.run/mock_accounts.json"
 
 
 def load_accounts() -> (Account, Account):
