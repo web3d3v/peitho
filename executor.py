@@ -32,7 +32,7 @@ class ExecutorInterface:
 
     def post_tg(self, text: str, bot_token: str, chat_id: str):
         bot = telegram.Bot(bot_token)
-        asyncio.ensure_future(bot.send_message(text=text, chat_id=chat_id))
+        asyncio.get_event_loop().run_until_complete(bot.send_message(text=text, chat_id=chat_id))
 
 
 class Executor(ExecutorInterface):
