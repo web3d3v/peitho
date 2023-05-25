@@ -100,6 +100,7 @@ def update_actions_twee_id(actions: List[Action], tweet_id: int, tweet_url:str, 
 
 def post_tg_if_soc(exexutor: ExecutorInterface, account: Account, text: str):
     if account.name == "sonsofcryptolabs":
+        print("tg posting: ", text)
         exexutor.post_tg(text, TG_BOT_TOKEN, "-1001481837102")
 
 def exec_next_action(executor: ExecutorInterface, actions: List[Action]) -> List[Action]:
