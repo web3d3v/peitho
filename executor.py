@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 import tweepy
 import os
 import telegram
+import asyncio
 
 load_dotenv()
 
@@ -31,8 +32,7 @@ class ExecutorInterface:
 
     def post_tg(self, text: str, bot_token: str, chat_id: str):
         bot = telegram.Bot(bot_token)
-        async with bot:
-            await bot.send_message(text=text, chat_id=chat_id)
+        asyncio.ensure_future(bot.send_message(text=text, chat_id=chat_id))
 
 
 class Executor(ExecutorInterface):
