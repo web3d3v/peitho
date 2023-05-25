@@ -7,6 +7,8 @@ import tweepy
 import os
 import telegram
 import asyncio
+import json
+import requests
 
 load_dotenv()
 
@@ -15,6 +17,7 @@ CUSTOMER_API_KEY_SECRET = os.getenv("CUSTOMER_API_KEY_SECRET")
 CLIENT_ID = os.getenv("CLIENT_ID")
 CLIENT_SECRET = os.getenv("CLIENT_SECRET")
 TG_BOT_TOKEN = os.getenv("TG_BOT_TOKEN")
+DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
 
 
 class ExecutorInterface:
@@ -33,6 +36,11 @@ class ExecutorInterface:
     def post_tg(self, text: str, bot_token: str, chat_id: str):
         bot = telegram.Bot(bot_token)
         asyncio.get_event_loop().run_until_complete(bot.send_message(text=text, chat_id=chat_id))
+
+    def post_to_discord(self, webhook_url: str, message: str):
+        payload = {"content": message}
+        headers = {'Content-Type': 'application/json'}
+        response = requests.post(webhook_url, data=json.dumps(payload), headers=headers)
 
 
 class Executor(ExecutorInterface):
@@ -102,6 +110,7 @@ def post_tg_if_soc(exexutor: ExecutorInterface, account: Account, text: str):
     if account.name == "sonsofcryptolabs":
         print("tg posting: ", text)
         exexutor.post_tg(text, TG_BOT_TOKEN, "-1001481837102")
+        exexutor.post_to_discord(DISCORD_WEBHOOK_URL, text)
 
 def exec_next_action(executor: ExecutorInterface, actions: List[Action]) -> List[Action]:
     _actions = actions
