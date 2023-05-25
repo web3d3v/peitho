@@ -5,6 +5,7 @@ from typing import List
 from dotenv import load_dotenv
 import tweepy
 import os
+import telegram
 
 load_dotenv()
 
@@ -12,6 +13,7 @@ CUSTOMER_API_KEY = os.getenv("CUSTOMER_API_KEY")
 CUSTOMER_API_KEY_SECRET = os.getenv("CUSTOMER_API_KEY_SECRET")
 CLIENT_ID = os.getenv("CLIENT_ID")
 CLIENT_SECRET = os.getenv("CLIENT_SECRET")
+TG_BOT_TOKEN = os.getenv("TG_BOT_TOKEN")
 
 
 class ExecutorInterface:
@@ -26,6 +28,11 @@ class ExecutorInterface:
     def srt(self, account: Account, tweet_id: int, tweet_url: str, uuid: str):
         """Retweet tweet from account"""
         pass
+
+    def post_tg(self, text: str, bot_token: str, chat_id: str):
+        bot = telegram.Bot(bot_token)
+        async with bot:
+            await bot.send_message(text=text, chat_id=chat_id)
 
 
 class Executor(ExecutorInterface):
@@ -80,6 +87,9 @@ class MockExecutor(ExecutorInterface):
     def srt(self, account: Account, tweet_id: int, tweet_url: str, uuid: str):
         print("Self RTing", account.name, tweet_id, uuid)
 
+    def post_tg(self, text: str, bot_token: str, chat_id: str):
+        print("Posting to tg", text)
+
 
 def update_actions_twee_id(actions: List[Action], tweet_id: int, tweet_url:str, uuid: str) -> List[Action]:
     for action in actions:
@@ -88,6 +98,9 @@ def update_actions_twee_id(actions: List[Action], tweet_id: int, tweet_url:str, 
             action.tweet_url = tweet_url
     return actions
 
+def post_tg_if_soc(exexutor: ExecutorInterface, account: Account, text: str):
+    if account.name == "sonsofcryptolabs":
+        exexutor.post_tg(text, TG_BOT_TOKEN, "-1001481837102")
 
 def exec_next_action(executor: ExecutorInterface, actions: List[Action]) -> List[Action]:
     _actions = actions
@@ -100,10 +113,13 @@ def exec_next_action(executor: ExecutorInterface, actions: List[Action]) -> List
         tweet_id = executor.post(action.account, action.post)
         tweet_url = f"https://twitter.com/{action.account.name}/status/{tweet_id}"
         _actions = update_actions_twee_id(_actions, tweet_id, tweet_url, action.uuid)
+        post_tg_if_soc(executor, action.account, tweet_url)
     elif isinstance(action, RTAction):
         executor.rt(action.account, action.tweet_id, action.tweet_url, action.uuid)
+        post_tg_if_soc(executor, action.account, action.tweet_url)
     elif isinstance(action, SRTAction):
         executor.srt(action.account, action.tweet_id, action.tweet_url, action.uuid)
+        post_tg_if_soc(executor, action.account, action.tweet_url)
     else:
         print("Unexpected object type", action)
 

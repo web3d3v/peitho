@@ -4,3 +4,4 @@ pandas
 tweepy
 python-dotenv
 flask
+python-telegram-bot
